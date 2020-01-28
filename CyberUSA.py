@@ -2,6 +2,7 @@ import requests
 import html2text
 import bs4
 import os
+os.system('clear')
 banner = 'Разработчик: CyberUSA\nVK: https://vk.com/CyberUSA\nТелеграм: @CyberUSA\n\n'
 
 print(banner)
