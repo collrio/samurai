@@ -1,17 +1,16 @@
 # samurai
-Samurai Deanone Servis [CYBERUSA] 
-VK: vk.me/CyberUSA 
-TG: @CyberUSA
+Samurai Deanone PHONE
 
-install
+Связь с админом!
+VK| vk.me/CyberUSA 
+TG| @CyberUSA
 
-1.
-pkg install python 
+Команды для установки!
+#| pkg install git
+1| pkg install python 
+2| cd samurai
+3| pip install -r requirements.txt
+4| python CyberUSA.py
 
-2.
-cd samurai
 
-3.
-pip install -r requirements.txt
-
-python CyberUSA.py
+Команды для последущих запусков не требуют павторять команды # и 1.
