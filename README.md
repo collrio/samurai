@@ -32,9 +32,11 @@ TG| @CyberUSA
   ``cd samurai``
 
   5.Устанавливаем зависимости
+  
   ``pip3 install -r requirements.txt``
   
   6.Запуск
+  
   ``python3 CyberUSA.py``
   
   ###При дальнейшем изпользовании требуется повторение только команды 6
