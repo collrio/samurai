@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 
-from colorama import init
 from termcolor import colored
 import requests
-import html2text
 import bs4
 import os
 import time
 
 banner = colored("Разработчик: CyberUSA && xsestech\nVK: https://vk.com/CyberUSA\nТелеграм: @CyberUSA\n\n", 'blue')
+menu_text = colored("РЕЖИМЫ:", 'green') + """
+0 - выход
+1 - вывод всех данных
+2 - вывод даты публикации и адреса
+Введите номер режима: """
+
 
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -21,7 +25,6 @@ def avito(mode):
     b = bs4.BeautifulSoup(res.text, "html.parser")
     print("Подождите, собираются данные\n")
     operator(phone)
-    print()
     a = b.find_all(href=True, rel="nofollow")[0]['href']
     resn = requests.get("https://mirror.bullshit.agency" + str(a))
     n = bs4.BeautifulSoup(resn.text, "html.parser")
@@ -46,20 +49,16 @@ def operator(phone):
     p = b.select("div[class~=jumbotron] > h2")
     print(colored("Данные по номеру:", 'blue'))
     print(colored(p[0].getText(), 'yellow'))
+    print()
 
 
 if __name__ == '__main__':
-    init()
     clear()
 
     print(banner)
     print(colored("CYBER DEANONE V 2.0\n", "red"))
 
-    mode = input(colored("РЕЖИМЫ:", 'green') + """
-    0 - выход
-    1 - вывод всех данных
-    2 - вывод даты публикации и адреса
-    Введите номер режима: """)
+    mode = input(menu_text)
 
     if mode != "0":
         avito(mode)
