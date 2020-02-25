@@ -6,9 +6,11 @@ import html2text
 import bs4
 import os
 import time
+
+
 init()
 os.system('clear')
-banner =colored("Разработчик: CyberUSA\nVK: https://vk.com/CyberUSA\nТелеграм: @CyberUSA\n\n",'blue')
+banner =colored("Разработчик: CyberUSA && xsestech\nVK: https://vk.com/CyberUSA\nТелеграм: @CyberUSA\n\n",'blue')
 print(banner)
 print(colored("CYBER DEANONE V 2.0\n","red"))
 
@@ -17,16 +19,26 @@ m = input(colored("РЕЖИМЫ:\n", 'green') + """
 1 - вывод всех данных\n
 2 - вывод даты публикации и адреса\n
 Введите номер режима: """)
+
+
 if m=="0":
 	os.system('clear')
 	exit(0)
+
 
 def avito():
 	global m
 	phone = input("\n Введите номер: +7")
 	res = requests.get("https://mirror.bullshit.agency/search_by_phone/" +str(phone))
 	b=bs4.BeautifulSoup(res.text, "html.parser")
+	print("Подождите, собираются данные\n")
 	operator(phone)
+	a = b.find_all(href=True,rel="nofollow")[0]['href']
+	resn =  requests.get("https://mirror.bullshit.agency" +str(a))
+	n = bs4.BeautifulSoup(resn.text, "html.parser")
+	name = n.select('strong')[0].getText()
+	print(colored("Имя: ",'red')+colored(name,'blue'))
+	print('\n')
 	time.sleep(4)
 	t = b.select('h4')
 	p = b.select('p')
@@ -41,6 +53,7 @@ def avito():
 			print(colored("Адрес: "+ p[i].select('span')[0].getText(),"green"))
 			print(colored("Дата Публикации: "+ p[i].select('span')[1].getText(),"green"))
 
+
 def operator(phone):
 	res = requests.get("https://tel-search.ru/numbers/phone=" + str(phone))
 	b=bs4.BeautifulSoup(res.text, "html.parser")
@@ -48,10 +61,12 @@ def operator(phone):
 	k = 0
 	print(colored("Данные по номеру:",'blue'))
 	print(colored(p[0].getText(),'yellow'))
-	print('\n')
+
+
 avito()
 time.sleep(1)
 x = input("\nНажмите ENTER")
+
 if x=="":
 	os.system('clear')
 	exit(0)
