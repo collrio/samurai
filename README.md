@@ -1,5 +1,5 @@
 # samurai
-Samurai Deanone PHONE
+PHONE PARSER
 
 Связь с админом!
 VK| vk.me/CyberUSA 
@@ -10,7 +10,7 @@ TG| @CyberUSA
 1| pkg install python 
 2| cd samurai
 3| pip install -r requirements.txt
-4| python CyberUSA.py
+4| python3 phone.py
 
 Команды для последущих запусков не требуют павторять команды # и 1.
 
