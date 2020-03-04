@@ -6,7 +6,7 @@ import bs4
 import os
 import time
 
-banner = colored("Разработчик: CyberUSA && xsestech\nVK: https://vk.com/CyberUSA\nТелеграм: @CyberUSA\n\n", 'blue')
+banner = colored("Разработчик: CyberUSA\nVK: https://vk.com/CyberUSA\nТелеграм: @CyberUSA\n\n", 'blue')
 menu_text = colored("РЕЖИМЫ:", 'green') + """
 0 - выход
 1 - вывод всех данных
