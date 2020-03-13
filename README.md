@@ -12,7 +12,7 @@ TG| @CyberUSA
 #| pkg install git
 1| pkg install python3
 2| cd samurai
-3| pip install -r requirements.txt
+3| python module.py
 ##Внимание запускать с 3 версии питона
 4| python3 phone.py
 
@@ -37,7 +37,7 @@ TG| @CyberUSA
 
   5.Устанавливаем зависимости
   
-  ``pip3 install -r requirements.txt``
+  ``python module.py``
   
   6.Запуск
   
