@@ -1,15 +1,19 @@
 # samurai
 PHONE PARSER
-
+Данная утилита поможет вам найти информацию по номеру
+Avito - парсит данные с авито
+Getcontact - получает информацию с сервиса Getcontact
+Sim - получает основную информацию о симкарте
 Связь с админом!
 VK| vk.me/CyberUSA 
 TG| @CyberUSA
 
 ## Установка
 #| pkg install git
-1| pkg install python 
+1| pkg install python3
 2| cd samurai
 3| pip install -r requirements.txt
+##Внимание запускать с 3 версии питона
 4| python3 phone.py
 
 Команды для последущих запусков не требуют павторять команды # и 1.
