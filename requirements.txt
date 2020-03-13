@@ -1,0 +1,6 @@
+beautifulsoup4==4.8.2
+colorama==0.4.3
+requests==2.23.0
+hmac
+urllib
+cryptodome
