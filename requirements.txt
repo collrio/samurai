@@ -1,6 +1,0 @@
-beautifulsoup4
-colorama
-requests
-hmac
-pycryptodome
-termcolor
