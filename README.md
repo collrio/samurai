@@ -10,9 +10,13 @@ TG| @CyberUSA
 
 ## Установка
 #| pkg install git
+
 1| pkg install python3
+
 2| cd samurai
+
 3| python module.py
+
 ##Внимание запускать с 3 версии питона
 4| python3 phone.py
 
